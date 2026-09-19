@@ -112,7 +112,7 @@ class Fitzone_Intro_Video extends Widget_Base {
                         'name'      => 'list_icon',
                         'label'     => __( 'Select Icon', 'fitzone' ),
                         'type'      => Controls_Manager::ICON,
-                        'default'   => 'fa fa-pencil-square-o',
+                        'default'   => 'fa-regular fa-pen-to-square',
                         'options'   => fitzone_themify_icon()
                     ],
                     [

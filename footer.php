@@ -61,7 +61,7 @@
                                 $show_social = fitzone_opt('fitzone_footer_social_icons_toggle');
                                 if ( $show_social == 1 ){
                         ?>
-                        <div class="copyright_social_icon text-right">
+                        <div class="copyright_social_icon text-end">
                             <?php
                                 for ( $i = 0; $i < count($social_icons); $i++ ) {
                             ?>
