@@ -84,7 +84,7 @@
         activateThumb(e.detail.nextSlide);
       });
       slider.addEventListener('afterChange', function (e) {
-        UI.toElements('.content').forEach(function (el) { el.style.display = 'none'; });
+        UI.toElements('.content[data-id]').forEach(function (el) { el.style.display = 'none'; });
         UI.toElements('.content[data-id="' + (e.detail.currentSlide + 1) + '"]').forEach(show);
       });
     });

@@ -231,7 +231,7 @@
 						'handler'		=> 'fitzone-custom',
 						'file' 			=> $jsPath.'custom.js',
 						'dependency' 	=> array( 'fitzone-ui-js' ),
-						'version' 		=> $this->fitzone_version . '-s2',
+						'version' 		=> $this->fitzone_version . '-s3',
 						'in_footer' 	=> true
 					),
 
