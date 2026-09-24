@@ -234,13 +234,6 @@
 						'in_footer' 	=> true
 					),
 					array(
-						'handler'		=> 'fitzone-instagram-feed-js',
-						'file' 			=> $jsPath.'jquery.instagramFeed.min.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> '1.0',
-						'in_footer' 	=> true
-					),
-					array(
 						'handler'		=> 'fitzone-owl-carousel-js',
 						'file' 			=> $jsPath.'owl.carousel.min.js',
 						'dependency' 	=> array( 'jquery' ),
@@ -261,19 +254,19 @@
 						'version' 		=> '1.0',
 						'in_footer' 	=> true
 					),
+					
 					array(
-						'handler'		=> 'fitzone-jquery-nice-select-min-js',
-						'file' 			=> $jsPath.'jquery.nice-select.min.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> '1.0',
+						'handler'		=> 'fitzone-ui-js',
+						'file' 			=> $jsPath.'colorlib-ui.js',
+						'dependency' 	=> array(),
+						'version' 		=> '2.1.1',
 						'in_footer' 	=> true
 					),
-					
 					array(
 						'handler'		=> 'fitzone-custom',
 						'file' 			=> $jsPath.'custom.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> $this->fitzone_version,
+						'dependency' 	=> array( 'jquery', 'fitzone-ui-js' ),
+						'version' 		=> $this->fitzone_version . '-s1',
 						'in_footer' 	=> true
 					),
 
