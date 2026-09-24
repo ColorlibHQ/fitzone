@@ -10,7 +10,7 @@
 add_action( 'wp_enqueue_scripts', 'fitzone_sl_enqueue_scripts' );
 function fitzone_sl_enqueue_scripts() {
 
-	wp_enqueue_script( 'fitzone-post-likes', FITZONE_DIR_JS_URI . 'post-likes.js', array( 'jquery' ), '0.5', false );
+	wp_enqueue_script( 'fitzone-post-likes', FITZONE_DIR_JS_URI . 'post-likes.js', array( 'fitzone-ui-js' ), '0.5-s2', true );
 
 	wp_localize_script( 'fitzone-post-likes', 'simpleLikes', array(
 		'ajaxurl' => admin_url( 'admin-ajax.php' ),

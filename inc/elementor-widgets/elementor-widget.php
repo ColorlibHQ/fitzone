@@ -293,15 +293,13 @@ if ( !class_exists( 'Fitzone_El_Widgets' ) ) {
             // googleapis js
             wp_register_script( 'maps-googleapis', '//maps.googleapis.com/maps/api/js?key='.esc_attr( $apiKey ) );
 
-            // ajaxchimp js
-            wp_enqueue_script( 'jquery-ajaxchimp', FITZONE_DIR_ELEMENTOR . 'assets/js/jquery.ajaxchimp.min.js', array('jquery'), '1.0', true );
 
 
             // fitzone map custom js
-            wp_register_script( 'fitzone-map-custom', FITZONE_DIR_ELEMENTOR . 'assets/js/map-custom.js', array('jquery'), '1.0', true );
+            wp_register_script( 'fitzone-map-custom', FITZONE_DIR_ELEMENTOR . 'assets/js/map-custom.js', array(), '1.0-s2', true );
 
             // fitzone companion main js
-            wp_enqueue_script( 'fitzone', FITZONE_DIR_ELEMENTOR . 'assets/js/fitzone-companion-main.js', array( 'jquery', 'jquery-ui-datepicker' ), '1.0', true );
+            wp_enqueue_script( 'fitzone', FITZONE_DIR_ELEMENTOR . 'assets/js/fitzone-companion-main.js', array( 'fitzone-ui-js' ), '1.0-s2', true );
 
 
             wp_localize_script( 'fitzone', 'ajax_object',

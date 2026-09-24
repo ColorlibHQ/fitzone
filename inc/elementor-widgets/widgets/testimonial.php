@@ -292,22 +292,26 @@ class Fitzone_Testimonial extends Widget_Base {
         if( \Elementor\Plugin::$instance->editor->is_edit_mode() === true  ) {
         ?>
         <script>
-        ( function( $ ){
-            $(document).ready(function() {
-                var review = $('.client_review_part');
-                if (review.length) {
-                    review.owlCarousel({
+        (function () {
+            function run() {
+                var UI = window.ColorlibUI;
+                if (!UI) return;
+                UI.owl('.client_review_part', {
                     items: 1,
                     loop: true,
                     dots: true,
                     autoplay: true,
                     autoplayHoverPause: true,
                     autoplayTimeout: 5000,
-                    nav: false,
-                    });
-                }
-            });
-        })(jQuery);
+                    nav: false
+                });
+            }
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', run);
+            } else {
+                run();
+            }
+        })();
         </script>
         <?php 
         }
